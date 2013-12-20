@@ -1,0 +1,112 @@
+
+.element {
+  	padding: 40px 15px;
+  	text-align: center;
+  	max-width:480px;
+   	margin:0 auto;
+  
+}
+
+.enveloppe{
+	border-bottom: 1px solid #cdcdcd;	
+}
+
+.enveloppe:nth-child(even) {background: #f1f2f3}
+.enveloppe:nth-child(odd) {background: #FFF}
+
+.container{
+ 	padding-right:0;
+ 	padding-left:0;
+ 	margin-right:0;
+ 	margin-left:0;
+ 	width:100%;
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive !important;
+    font-weight: 700;
+    line-height: 34px;
+    font-size: 32px;
+    margin: 0;
+    }
+h2 {
+    font-family: 'EB Garamond', serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 14px !important;
+    line-height: 16px;
+    letter-spacing: 2px;
+    margin: 0 0 40px 0;
+    color:#474747;
+    }
+p {
+    font-family: 'EB Garamond', serif;
+    font-size: 16px;
+    line-height: 23px;
+    margin: 0 0 23px 0;
+    }
+
+.lead{
+	font-size: 32px;
+	line-height:0.9;
+	margin-bottom:0;
+}
+
+.topbar{
+	position: fixed;
+	z-index:1000;
+	width: 75%;
+	left: 50%;
+	margin: 0 0 0 -37.5%;
+}
+
+.topbar ul li{
+	display: inline;
+	margin: 0 5px;
+
+}
+
+.input-group{
+	margin: 15px 0 30px 0;
+}
+
+.new h2{
+	margin-bottom:0;
+}
+
+textarea{
+	margin:10px 0 50px 0;
+}
+
+.declencheur{
+	color:#666;
+	margin-top: -25px;
+	font-size: 10px;
+	font-family: sans-serif;
+}
+
+.new .lead{
+	margin-top: 30px;
+	font-size: 26px;
+}
+
+.btn-lg{
+	font-size: 40px;
+	font-family: Helvetica;
+}
+
+::-webkit-input-placeholder {
+   color: red;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: red;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: red;  
+}
+
+:-ms-input-placeholder {  
+   color: red;  
+}
