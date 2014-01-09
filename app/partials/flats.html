@@ -1,0 +1,39 @@
+
+
+<div class="container new">
+
+
+
+      <div class="enveloppe">
+        <div class="element">
+          <h1>What was your exact address ?</h1>
+          <form>
+          <div class="input-group input-group-lg">
+            <span class="input-group-addon">@</span>
+            <input type="text" ng-model="newMessage.text" class="form-control" placeholder="adress, CP and town">
+            <input type="text" ng-model="newMessage.description" class="form-control" placeholder="Precise description">
+          </div>
+          </form>
+            <button type="button" class="btn btn-primary btn-lg btn-block" ng-click="addMessage()">Submit</button>
+          </p>
+          <p class="declencheur">Thanks mate !</p>
+        </div>
+      </div>
+    </div><!-- /.container -->
+
+<div id="messages" ng-show="messages" class="container">
+	<div class="enveloppe" ng-repeat="message in messages | orderByPriority | reverse">
+        <div class="element">
+	    <h1>{{message.text}}</h1>
+      <h2>{{message.description}}</h2>
+	    </div>
+	</div> 
+	  
+</div>
+
+
+
+<p>
+  Running the 'interpolate' filter:
+  {{ 'Current version is v%VERSION%.' | interpolate }}
+</p>
