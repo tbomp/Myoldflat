@@ -15,7 +15,14 @@ angular.module('myApp.controllers', [])
       // add new messages to the list
       $scope.addMessage = function() {
          if( $scope.newMessage ) {
-            $scope.messages.$add({text: $scope.newMessage.text, description: $scope.newMessage.description});
+            $scope.messages.$add(
+               {
+                  text: $scope.newMessage.text, 
+                  description: $scope.newMessage.description,
+                  love: $scope.newMessage.love,
+                  hate: $scope.newMessage.hate,
+               }
+            );
             $scope.newMessage = null;
          }
       };

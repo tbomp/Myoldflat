@@ -18,6 +18,8 @@
     value:a("$provide","value"),constant:a("$provide","constant","unshift"),filter:a("$filterProvider","register"),controller:a("$controllerProvider","register"),directive:a("$compileProvider","directive"),config:h,run:function(a){d.push(a);return this}};f&&h(f);return g})}})})(window);
 
 
+    
+
     // include a third-party async loader library
     /*!
      * $script.js v1.3
@@ -37,18 +39,23 @@
         $script([
             'http://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular-route.js',
             'https://cdn.firebase.com/libs/angularfire/0.5.0/angularfire.js',
+            'http://code.jquery.com/jquery-1.8.2.min.js',
+            'http://code.jquery.com/ui/1.10.3/jquery-ui.js',
+            'http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js',
             'js/app.js',
             'js/config.js',
             'js/services.js',
             'js/controllers.js',
             'js/filters.js',
             'js/directives.js',
+            'js/angularSlideables.js',
             'js/module.waitForAuth.js'
         ], function() {
             // when all is done, execute bootstrap angular application
             angular.bootstrap(document, ['myApp']);
         })
     });
+
   </script>
   <title>My AngularJS App</title>
   <link rel="stylesheet" href="css/app.css">

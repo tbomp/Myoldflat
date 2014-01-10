@@ -1,39 +1,55 @@
 
 
-<div class="container new">
-
-
-
+<div class="container">
+  <div id="new" class="slideable">
+    <div class="row row-fluid">
       <div class="enveloppe">
         <div class="element">
-          <h1>What was your exact address ?</h1>
           <form>
-          <div class="input-group input-group-lg">
-            <span class="input-group-addon">@</span>
-            <input type="text" ng-model="newMessage.text" class="form-control" placeholder="adress, CP and town">
-            <input type="text" ng-model="newMessage.description" class="form-control" placeholder="Precise description">
+            <h1>Your exact address ?</h1>
+            <div class="left-inner-addon ">  
+              <i class="glyphicon glyphicon-zoom-out" ></i>
+              <input type="text" ng-model="newMessage.text" class="form-control" placeholder="adress, CP and town">
+            </div>
+
+            <h2>Your exact flat ?</h2>
+            <div class="left-inner-addon ">  
+              <i class="glyphicon glyphicon-zoom-in" ></i>
+              <textarea class="form-control" rows="2" placeholder="9th floor, after the first door go left, it's the door on your right" ng-model="newMessage.description" class="form-control" placeholder="Precise description"></textarea>
+            </div>
+
+            <p class="c-lead">The biggest cheat you found out the hard way</p>
+            <div class="left-inner-addon ">  
+              <i class="glyphicon glyphicon-hand-up" ></i>
+              <input type="text" class="form-control" ng-model="newMessage.hate" placeholder="the great light exposition">
+            </div>
+
+            <p class="c-lead">The little bonus you did not suspect ?</p>
+            <div class="left-inner-addon ">  
+              <i class="glyphicon glyphicon-heart-empty" ></i>
+              <input type="text" class="form-control" ng-model="newMessage.love" placeholder="the great light exposition">
+            </div>
+
+            </form>
+            <button id="t-add" type="button" class="btn btn-primary btn-lg btn-block" ng-click="addMessage()">Submit</button>
+            <p class="declencheur">Thanks mate !</p>
           </div>
-          </form>
-            <button type="button" class="btn btn-primary btn-lg btn-block" ng-click="addMessage()">Submit</button>
-          </p>
-          <p class="declencheur">Thanks mate !</p>
         </div>
       </div>
-    </div><!-- /.container -->
+    </div>
 
-<div id="messages" ng-show="messages" class="container">
-	<div class="enveloppe" ng-repeat="message in messages | orderByPriority | reverse">
+
+  <div id="messages" ng-show="messages" class="container">
+  	<div class="enveloppe" ng-repeat="message in messages | orderByPriority | reverse">
         <div class="element">
-	    <h1>{{message.text}}</h1>
-      <h2>{{message.description}}</h2>
-	    </div>
-	</div> 
-	  
-</div>
+    	    <h1>{{message.text}}</h1>
+          <h2>{{message.description}}</h2>
+          <p class="c-lead">I wish i knew {{message.hate}}</p>
+          <p class="c-lead">Lucky me (you?) : {{message.love}}</p>	    
+      </div>
+  	</div> 
+  </div>
+  
+</div><!-- /.container -->
 
 
-
-<p>
-  Running the 'interpolate' filter:
-  {{ 'Current version is v%VERSION%.' | interpolate }}
-</p>
